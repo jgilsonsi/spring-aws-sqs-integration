@@ -1,0 +1,17 @@
+server:
+    port: 9000
+    servlet:
+        context-path: /sqs
+
+cloud:
+    aws:
+        region:
+            static: sa-east-1      
+            auto: false
+        stack:
+            auto: false
+        credentials:
+            accessKey: admin
+            secretKey: master
+        end-point:
+            uri: https://sqs.sa-east-1.amazonaws.com/634781442624/spring-boot-sqs

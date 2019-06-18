@@ -20,11 +20,11 @@ import org.springframework.web.bind.annotation.RestController;
 @RequestMapping("api/v1/queue")
 public class JSQSController {
 
-    @Autowired
-    private QueueMessagingTemplate queueMessagingTemplate;
-
     @Value("${cloud.aws.end-point.uri}")
     private String sqsEndpoint;
+
+    @Autowired
+    private QueueMessagingTemplate queueMessagingTemplate;
 
     private static final Logger log = LoggerFactory.getLogger(JSQSController.class);
 
